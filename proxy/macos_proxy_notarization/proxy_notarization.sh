@@ -42,6 +42,7 @@ create_dev_certs() {
   ls
   echo $CERTIFICATE_P12
   echo $ESO_TEAM_P12
+  echo "IMPORT CERTS HERE:"
   security import ./eso_certificate.p12 -x -t agg -k $KEY_CHAIN -P $WAVEFRONT_TEAM_CERT_PASSWORD -T /usr/bin/codesign;
   security import ./certificate.p12 -x -t agg -k $KEY_CHAIN -P $CERTIFICATE_PASSWORD -T /usr/bin/codesign;
 
