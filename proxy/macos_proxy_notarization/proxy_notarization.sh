@@ -93,6 +93,7 @@ notarized_newly_package_proxy() {
   echo $requestuuid
 
   echo "Executing this command to see the status of notarization"
+  sleep 60
   xcrun altool --notarization-info "$requestuuid" -u "$USERNAME" -p "$APP_SPECIFIC_PW"
 }
 
